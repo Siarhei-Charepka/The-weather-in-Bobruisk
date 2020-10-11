@@ -11,18 +11,23 @@ import java.io.IOException;
 public class Weather implements WeatherInfo {
 
     /**
-     * this method get value of Temperature in Bobruisk from weather.com
-     * @return information about the weather
+     * This method get value of Temperature and wet in Bobruisk from weather.com
      * @throws IOException
      */
     @Override
     public String getWeatherInfo() throws IOException {
 
         String url = "https://weather.com/";
-        String info = Jsoup.connect(url).get().selectFirst("span[data-testid=TemperatureValue]").text();
-        System.out.println("Temperature in Bobruisk now = " + info);
+        String infoTemp = Jsoup.connect(url).get().selectFirst("span[data-testid=TemperatureValue]").text();
+        String infoWet = Jsoup.connect(url).get().selectFirst("span[data-testid=PercentageValue]").text();
+
+        System.out.println("Temperature and wet in Bobruisk now = " + infoTemp + ", " + infoWet);
+
+        /**
+         * The logger writes information about the work of the getWeatherInfo method to the file logs.log
+         */
         Logger logger = LoggerFactory.getLogger(Weather.class);
         logger.info("All is good! I working!");
-        return info;
+        return infoTemp;
     }
 }
