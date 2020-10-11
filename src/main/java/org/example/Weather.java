@@ -21,7 +21,7 @@ public class Weather implements WeatherInfo {
         String infoTemp = Jsoup.connect(url).get().selectFirst("span[data-testid=TemperatureValue]").text();
         String infoWet = Jsoup.connect(url).get().selectFirst("span[data-testid=PercentageValue]").text();
 
-        System.out.println("Temperature and wet in Bobruisk now = " + infoTemp + ", " + infoWet);
+        System.out.println("Temperature and wet in Bobruisk now: = " + infoTemp + ", " + infoWet);
 
         /**
          * The logger writes information about the work of the getWeatherInfo method to the file logs.log
