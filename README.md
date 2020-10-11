@@ -6,6 +6,8 @@
 - HTML 
 - библиотека для парсинга страницы (https://jsoup.org/)
 - Continuous Integration Travis (https://docs.travis-ci.com/)
-- Все классы покрыты Javadocs
+- классы покрыты Javadocs
+- приложение подключено к базе данных mysql
+
   
  
