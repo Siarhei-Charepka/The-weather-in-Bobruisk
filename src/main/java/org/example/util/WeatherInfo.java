@@ -4,5 +4,6 @@ import java.io.IOException;
 
 public interface WeatherInfo {
 
-  String getWeatherInfo() throws IOException;
+  String getTemperatureInfo() throws IOException;
+  String getWetInfo() throws IOException;
 }
